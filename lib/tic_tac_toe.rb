@@ -53,6 +53,14 @@ def turn_count(board)
     plays == "X" || plays == "O"
   end
 end
+
+def current_player(board)
+  if player = turn_count(board).odd?
+    return "X"
+  else
+    "O"
+  end
+end
 # def turn_count(board)
 #   counter = 0
 #   until counter == 9
