@@ -50,7 +50,7 @@ end
 
 def turn_count(board)
   board.count do |plays|
-    plays != "" || plays != " "
+    plays == "X" || plays == "O"
   end
 end
 # def turn_count(board)
