@@ -58,10 +58,8 @@ def current_player(board)
   turn_count(board).even? ? "X" : "O"
 end
 
-# def turn_count(board)
-#   counter = 0
-#   until counter == 9
-#     turn(board)
-#     counter += 1
-#   end
-# end
+def won?(board)
+  WIN_COMBINATIONS.detect do |combo|
+    board[combo[0]] == board[combo[1]] && board[combo[0]] == board[combo[2]] && position_taken?(board, combo[0])
+  end
+end
