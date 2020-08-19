@@ -55,9 +55,9 @@ def turn_count(board)
 end
 
 def current_player(board)
-  turn_count.detect{ |i| i.odd? }
-  return "X"
+  turn_count(board).even? ? "X" : "O"
 end
+
 # def turn_count(board)
 #   counter = 0
 #   until counter == 9
