@@ -28,22 +28,12 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def move(board, index, current_player)
+def move(board, index, current_player = "X" || "O")
   board[index] = current_player
 end
 
 def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
-end
-
-def turn_count(board)
-  board.count do |plays|
-    plays == "X" || plays == "O"
-  end
-end
-
-def current_player(board)
-  turn_count(board).even? ? "X" : "O"
 end
 
 def turn(board)
@@ -57,6 +47,17 @@ def turn(board)
     turn(board)
   end
 end
+
+def turn_count(board)
+  board.count do |plays|
+    plays == "X" || plays == "O"
+  end
+end
+
+def current_player(board)
+  turn_count(board).even? ? "X" : "O"
+end
+
 # def turn_count(board)
 #   counter = 0
 #   until counter == 9
