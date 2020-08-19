@@ -49,9 +49,13 @@ def turn(board)
 end
 
 def turn_count(board)
-  counter = 0
-  until counter == 9
-    # turn(board)
-    counter += 1
-  end
+  board.count do |plays|
+    plays != "" || plays != " "
 end
+# def turn_count(board)
+#   counter = 0
+#   until counter == 9
+#     turn(board)
+#     counter += 1
+#   end
+# end
