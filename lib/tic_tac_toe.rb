@@ -36,6 +36,16 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
+def turn_count(board)
+  board.count do |plays|
+    plays == "X" || plays == "O"
+  end
+end
+
+def current_player(board)
+  turn_count(board).even? ? "X" : "O"
+end
+
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -47,21 +57,6 @@ def turn(board)
     turn(board)
   end
 end
-
-def turn_count(board)
-  turn = 0
-    board.each do |move|
-      if move == "X" || move == "O"
-        turn += 1
-    end
-  end
-  turn
-end
-
-def current_player(board)
-  turn_count(board).even? ? "X" : "O"
-end
-
 # def turn_count(board)
 #   counter = 0
 #   until counter == 9
