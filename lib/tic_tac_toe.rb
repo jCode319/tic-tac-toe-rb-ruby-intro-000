@@ -93,5 +93,7 @@ def play(board)
   input = gets
   until over?(board)
     turn(board)
+    num_of_turns += 1
   end
+
 end
