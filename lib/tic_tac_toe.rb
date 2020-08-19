@@ -67,3 +67,9 @@ end
 def draw?(board)
   !won?(board) && full?(board)
 end
+
+def full?(board)
+  board.all? do |token|
+    token == "X" || token == "O"
+  end
+end
