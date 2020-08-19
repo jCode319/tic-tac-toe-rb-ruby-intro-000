@@ -57,7 +57,6 @@ end
 def current_player(board)
   board.all?(&:odd?)
   return "X"
-  end
 end
 # def turn_count(board)
 #   counter = 0
