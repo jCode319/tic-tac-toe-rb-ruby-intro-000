@@ -55,7 +55,7 @@ def turn_count(board)
 end
 
 def current_player(board)
-  if move == turn_count(board).odd?
+  if play == turn_count(board).odd?
     return "X"
   else
     "O"
