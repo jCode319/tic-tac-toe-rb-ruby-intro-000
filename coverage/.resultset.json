@@ -4,7 +4,7 @@
       "/home/remote-block-8322/tic-tac-toe-rb-ruby-intro-000/lib/tic_tac_toe.rb": [
         null,
         1,
-        8,
+        9,
         null,
         null,
         null,
@@ -62,15 +62,13 @@
         3,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
+        2,
+        14,
         null,
         null
       ]
     },
-    "timestamp": 1597863588
+    "timestamp": 1597863646
   }
 }
