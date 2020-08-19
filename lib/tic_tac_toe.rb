@@ -42,10 +42,11 @@ def turn(board)
   index = input_to_index(user_input)
   if valid_move?(board, index)
     move(board, index, current_player(board))
-    display_board(board)
   else
+    puts "Please try again"
     turn(board)
   end
+  display_board(board)
 end
 
 def turn_count(board)
@@ -90,9 +91,10 @@ def winner(board)
 end
 
 def play(board)
-  input = gets
+  # input = gets
   until over?(board)
     turn(board)
+    current_player(board)
   end
   if won?(board)
     w = winner(board)
