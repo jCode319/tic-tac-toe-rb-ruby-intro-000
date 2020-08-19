@@ -73,3 +73,18 @@ def full?(board)
     token == "X" || token == "O"
   end
 end
+
+def draw?(board)
+  !won?(board) && full?(board)
+end
+
+def over?(board)
+  won?(board) || full?(board) || draw?(board)
+end
+
+def winner(board)
+  combo = won?(board)
+  unless combo == nil
+    board[combo[0]]
+  end
+end
