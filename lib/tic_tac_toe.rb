@@ -94,7 +94,7 @@ def play(board)
   # input = gets
   until over?(board)
     turn(board)
-    current_player(board)
+    # current_player(board)
   end
   if won?(board)
     w = winner(board)
